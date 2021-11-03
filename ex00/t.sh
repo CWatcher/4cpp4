@@ -5,3 +5,5 @@ make > /dev/null		\
 	|| exit 1
 
 aa
+echo
+aa --Wrong

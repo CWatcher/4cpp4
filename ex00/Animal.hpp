@@ -9,11 +9,11 @@ public:
 	Animal();
 	Animal( Animal const & );
 	Animal( std::string const & name );
-	~Animal();
+	virtual	~Animal();
 	Animal const & 	operator=( Animal const & );
 					operator std::string() const;
 	std::string		getType() const;
-	void			makeSound() const;
+	virtual void	makeSound() const;
 	void			setName( std::string const & );
 protected:
 	std::string	_type;

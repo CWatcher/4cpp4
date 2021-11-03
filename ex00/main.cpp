@@ -1,16 +1,13 @@
 #include "Cat.hpp"
+#include "WrongCat.hpp"
 #include <iostream>
-void runAnimal(Animal const & a)
+
+template< class TAnimal, class TCat > void testAnimalPointers()
 {
-	std::cout << a.getType() << ": ";
-	a.makeSound();
-}
-int main( void )
-{
-	const Animal* pAnimalToAnimal = new Animal( "*pAnimalToAnimal" );
+	const TAnimal* pAnimalToAnimal = new TAnimal( "*pAnimalToAnimal" );
 	std::cout << std::endl;
 
-	const Animal* pAnimalToCat = new Cat( "*pAnimalToCat");
+	const TAnimal* pAnimalToCat = new TCat( "*pAnimalToCat");
 	std::cout << std::endl;
 
 	std::cout << pAnimalToAnimal->getType() << ": ";
@@ -21,15 +18,34 @@ int main( void )
 
 	delete pAnimalToCat;
 	delete pAnimalToAnimal;
+}
+template< class TAnimal > void runAnimal(TAnimal const & a)
+{
+	std::cout << a.getType() << ": ";
+	a.makeSound();
+}
+template< class TAnimal, class TCat > void testAnimalReferences()
+{
 	std::cout << std::endl;
 
 	Animal	a1( "a1" );
 	std::cout << std::endl;
 
-	Cat		c1( "c1" );
+	TCat		c1( "c1" );
 	std::cout << std::endl;
 
 	runAnimal( a1 );
 	runAnimal( c1 );
 	std::cout << std::endl;
+}
+int main( int argc, char** )
+{
+	if ( argc == 1) {
+		testAnimalPointers< Animal, Cat >();
+		testAnimalReferences< Animal, Cat >();
+	}
+	else {
+		testAnimalPointers< WrongAnimal, WrongCat >();
+		testAnimalReferences< WrongAnimal, WrongCat >();
+	}
 }

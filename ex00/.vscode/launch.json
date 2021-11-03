@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "(lldb) Launch",
+      "name": "(lldb) Launch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/aa",
@@ -15,7 +15,7 @@
       "preLaunchTask": "make"
     },
     {
-      "type": "(gdb) Launch",
+      "name": "(gdb) Launch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/aa",
