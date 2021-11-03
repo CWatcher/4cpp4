@@ -2,6 +2,7 @@
 #include <iostream>
 void runAnimal(Animal const & a)
 {
+	std::cout << a.getType() << ": ";
 	a.makeSound();
 }
 int main( void )
@@ -12,7 +13,9 @@ int main( void )
 	const Animal* pAnimalToCat = new Cat( "*pAnimalToCat");
 	std::cout << std::endl;
 
+	std::cout << pAnimalToAnimal->getType() << ": ";
 	pAnimalToAnimal->makeSound();
+	std::cout << pAnimalToCat->getType() << ": ";
 	pAnimalToCat->makeSound();
 	std::cout << std::endl;
 

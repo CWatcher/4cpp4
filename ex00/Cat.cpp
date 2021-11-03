@@ -15,3 +15,7 @@ Cat::Cat( Cat const & cat )
 Cat::~Cat()
 {	std::cout << _name << ".Cat::~Cat()" << std::endl;
 }
+
+void			Cat::makeSound() const
+{	std::cout << "meow-meow" << std::endl;
+}

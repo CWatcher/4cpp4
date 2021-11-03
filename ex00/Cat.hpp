@@ -9,4 +9,6 @@ public:
 	Cat( std::string const & name = "cat" );
 	Cat( Cat const & );
 	~Cat();
+	void			makeSound() const;
+
 };

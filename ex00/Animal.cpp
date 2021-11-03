@@ -36,7 +36,7 @@ std::string		Animal::getType() const
 {	return _type;
 }
 void			Animal::makeSound() const
-{	std::cout << _name << ".Animal::makeSound()" << std::endl;
+{	std::cout << "__" << std::endl;
 }
 void				Animal::setName( std::string const & name ) {
 	_name = name;
