@@ -4,10 +4,8 @@
 
 template< class TAnimal, class TCat > void testAnimalPointers()
 {
-	const TAnimal* pAnimalToAnimal = new TAnimal( "*pAnimalToAnimal" );
-	std::cout << std::endl;
-
-	const TAnimal* pAnimalToCat = new TCat( "*pAnimalToCat");
+	const TAnimal* pAnimalToAnimal = new TAnimal();
+	const TAnimal* pAnimalToCat = new TCat();
 	std::cout << std::endl;
 
 	std::cout << pAnimalToAnimal->getType() << ": ";
@@ -27,11 +25,8 @@ template< class TAnimal > void runAnimal(TAnimal const & a)
 template< class TAnimal, class TCat > void testAnimalReferences()
 {
 	std::cout << std::endl;
-
-	Animal	a1( "a1" );
-	std::cout << std::endl;
-
-	TCat		c1( "c1" );
+	Animal	a1;
+	TCat		c1;
 	std::cout << std::endl;
 
 	runAnimal( a1 );

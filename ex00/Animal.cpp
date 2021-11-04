@@ -2,45 +2,25 @@
 #include <iostream>
 #include <sstream>
 
-Animal::Animal()
-{
-	std::cout << "Animal ()" << std::endl;
-	_type = "Animal";
+Animal::Animal():
+	_type( "Animal" )
+{	std::cout << _type << ".Animal()" << std::endl;
 }
-Animal::Animal( std::string const & name ):
-	_name( name )
-{
-	std::cout << "Animal ( name = " << _name << " )" << std::endl;
-	_type = "Animal";
-}
-Animal::Animal( Animal const & animal )
-{	
-	std::cout << "Animal( animal = " << animal._name << " )" << std::endl;
-	std::cout << *this << std::endl;
+Animal::Animal( Animal const & animal ):
+	_type( animal._type )
+{	std::cout << _type << ".Animal( Animal )" << std::endl;
 }
 Animal::~Animal()
-{	std::cout << _name << ".Animal::~Animal()" << std::endl;
+{	std::cout << _type << ".~Animal()" << std::endl;
 }
-Animal const & 	Animal::operator=( Animal const & animal )
+Animal const & 	Animal::operator=( Animal const & )
 {
-	std::cout << _name << " = " << animal._name << std::endl;
+	std::cout << _type << ".Animal::operator=() " << std::endl;
 	return *this;
 }
-				Animal::operator std::string() const
-{
-	std::stringstream ss;
-	ss << _type << "{ " << _name << " }";
-	return ss.str();
-}
-std::string		Animal::getType() const
+std::string const &	Animal::getType() const
 {	return _type;
 }
 void			Animal::makeSound() const
 {	std::cout << "__" << std::endl;
-}
-void				Animal::setName( std::string const & name ) {
-	_name = name;
-}
-std::ostream &operator<<(std::ostream &os, Animal const &animal) {
-	return os << (std::string)animal;
 }

@@ -1,19 +1,18 @@
 #include "Cat.hpp"
 #include <iostream>
 
-Cat::Cat( std::string const & name ):
-	Animal( name )
+Cat::Cat()
 {
-	std::cout << "Cat( name = " << name << " )" << std::endl;
 	_type = "Cat";
+	std::cout << _type << ".Cat()" << std::endl;
 }
-Cat::Cat( Cat const & cat )
+Cat::Cat( Cat const & )
 {
-	std::cout << "Cat( cat = " << cat._name << " )" << std::endl;
 	_type = "Cat";
+	std::cout << _type << ".Cat( Cat )" << std::endl;
 }
 Cat::~Cat()
-{	std::cout << _name << ".Cat::~Cat()" << std::endl;
+{	std::cout << _type << ".~Cat()" << std::endl;
 }
 
 void			Cat::makeSound() const
