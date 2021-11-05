@@ -9,9 +9,9 @@ public:
 	Animal();
 	Animal( Animal const & );
 	virtual	~Animal();
-	Animal const & 	operator=( Animal const & );
+	Animal      const &	operator=( Animal const & );
 	std::string	const &	getType() const;
-	virtual void	makeSound() const;
+	virtual void		makeSound() const;
 protected:
 	std::string	_type;
 };

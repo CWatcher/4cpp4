@@ -9,6 +9,6 @@ public:
 	Cat();
 	Cat( Cat const & );
 	~Cat();
-	void			makeSound() const;
+	void makeSound() const;
 
 };

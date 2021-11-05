@@ -9,6 +9,6 @@ public:
 	WrongCat();
 	WrongCat( WrongCat const & );
 	~WrongCat();
-	void			makeSound() const;
+	void makeSound() const;
 
 };
