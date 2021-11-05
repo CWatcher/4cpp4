@@ -29,8 +29,8 @@ template< class TAnimal, class TCat > void testAnimalReferences()
 	TCat	c1;
 	std::cout << std::endl;
 
-	runAnimal( a1 );
-	runAnimal( c1 );
+	runAnimal< TAnimal >( a1 );
+	runAnimal< TAnimal >( c1 );
 	std::cout << std::endl;
 }
 int main( int argc, char** )
