@@ -4,6 +4,7 @@
 
 template< class TAnimal, class TCat > void testAnimalPointers()
 {
+	std::cout << "========== Pointers to objects of a base class =========\n\n";
 	const TAnimal* pAnimalToAnimal = new TAnimal();
 	const TAnimal* pAnimalToCat = new TCat();
 	std::cout << std::endl;
@@ -25,6 +26,7 @@ template< class TAnimal > void runAnimal(TAnimal const & a)
 template< class TAnimal, class TCat > void testAnimalReferences()
 {
 	std::cout << std::endl;
+	std::cout << "========== References to objects of a base class =======\n\n";
 	TAnimal	a1;
 	TCat	c1;
 	std::cout << std::endl;
