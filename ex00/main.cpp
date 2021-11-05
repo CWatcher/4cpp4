@@ -25,8 +25,8 @@ template< class TAnimal > void runAnimal(TAnimal const & a)
 template< class TAnimal, class TCat > void testAnimalReferences()
 {
 	std::cout << std::endl;
-	Animal	a1;
-	TCat		c1;
+	TAnimal	a1;
+	TCat	c1;
 	std::cout << std::endl;
 
 	runAnimal( a1 );
