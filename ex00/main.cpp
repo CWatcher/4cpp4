@@ -1,4 +1,5 @@
 #include "Cat.hpp"
+#include "Dog.hpp"
 #include "WrongCat.hpp"
 #include <iostream>
 
@@ -7,14 +8,18 @@ template< class TAnimal, class TCat > void testAnimalPointers()
 	std::cout << "========== Pointers to objects of a base class =========\n\n";
 	const TAnimal* pAnimalToAnimal = new TAnimal();
 	const TAnimal* pAnimalToCat = new TCat();
+	const  Animal* pAnimalToDog = new  Dog();
 	std::cout << std::endl;
 
 	std::cout << pAnimalToAnimal->getType() << ": ";
 	pAnimalToAnimal->makeSound();
 	std::cout << pAnimalToCat->getType() << ": ";
 	pAnimalToCat->makeSound();
+	std::cout << pAnimalToDog->getType() << ": ";
+	pAnimalToDog->makeSound();
 	std::cout << std::endl;
 
+	delete pAnimalToDog;
 	delete pAnimalToCat;
 	delete pAnimalToAnimal;
 }
