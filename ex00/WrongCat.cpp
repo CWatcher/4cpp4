@@ -1,19 +1,18 @@
 #include "WrongCat.hpp"
 #include <iostream>
 
-WrongCat::WrongCat( std::string const & name ):
-	WrongAnimal( name )
+WrongCat::WrongCat()
 {
-	std::cout << "WrongCat( name = " << name << " )" << std::endl;
 	_type = "WrongCat";
+	std::cout << _type << ".WrongCat()" << std::endl;
 }
-WrongCat::WrongCat( WrongCat const & cat )
+WrongCat::WrongCat( WrongCat const & )
 {
-	std::cout << "WrongCat( cat = " << cat._name << " )" << std::endl;
 	_type = "WrongCat";
+	std::cout << _type << ".WrongCat( WrongCat )" << std::endl;
 }
 WrongCat::~WrongCat()
-{	std::cout << _name << ".WrongCat::~WrongCat()" << std::endl;
+{	std::cout << _type << ".~WrongCat()" << std::endl;
 }
 
 void			WrongCat::makeSound() const
