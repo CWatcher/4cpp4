@@ -6,6 +6,7 @@ int main( int, char** )
 {
 	size_t const	n = 4;
 	Animal*			pAnimals[ n ];
+//	Animal			animal;
 	Dog				dog;
 	Cat				cat;
 	size_t 			i = 0;
