@@ -8,22 +8,14 @@ template< class TAnimal, class TCat > void testAnimalPointers()
 	std::cout << "========== Pointers to objects of a base class =========\n\n";
 	const TAnimal*	pAnimalToAnimal = new TAnimal();
 	const TAnimal*	pAnimalToCat = new TCat();
-	const TCat*		pCatToCat = new TCat;
-	const  Animal*	pAnimalToDog = new  Dog();
 	std::cout << std::endl;
 
 	std::cout << pAnimalToAnimal->getType() << ": ";
 	pAnimalToAnimal->makeSound();
 	std::cout << pAnimalToCat->getType() << ": ";
 	pAnimalToCat->makeSound();
-	std::cout << pCatToCat->getType() << ": ";
-	pCatToCat->makeSound();
-	std::cout << pAnimalToDog->getType() << ": ";
-	pAnimalToDog->makeSound();
 	std::cout << std::endl;
 
-	delete pAnimalToDog;
-	delete pCatToCat;
 	delete pAnimalToCat;
 	delete pAnimalToAnimal;
 }
