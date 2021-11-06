@@ -3,16 +3,16 @@
 
 WrongCat::WrongCat()
 {
-	_type = "WrongCat";
-	std::cout << _type << ".WrongCat()" << std::endl;
+	type = "WrongCat";
+	std::cout << type << ".WrongCat()" << std::endl;
 }
 WrongCat::WrongCat( WrongCat const & )
 {
-	_type = "WrongCat";
-	std::cout << _type << ".WrongCat( WrongCat )" << std::endl;
+	type = "WrongCat";
+	std::cout << type << ".WrongCat( WrongCat )" << std::endl;
 }
 WrongCat::~WrongCat()
-{	std::cout << _type << ".~WrongCat()" << std::endl;
+{	std::cout << type << ".~WrongCat()" << std::endl;
 }
 
 void			WrongCat::makeSound() const

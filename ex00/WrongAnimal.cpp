@@ -3,23 +3,23 @@
 #include <sstream>
 
 WrongAnimal::WrongAnimal():
-	_type( "WrongAnimal" )
-{	std::cout << _type << ".WrongAnimal()" << std::endl;
+	type( "WrongAnimal" )
+{	std::cout << type << ".WrongAnimal()" << std::endl;
 }
 WrongAnimal::WrongAnimal( WrongAnimal const & animal ):
-	_type( animal._type )
-{	std::cout << _type << ".WrongAnimal( WrongAnimal )" << std::endl;
+	type( animal.type )
+{	std::cout << type << ".WrongAnimal( WrongAnimal )" << std::endl;
 }
 WrongAnimal::~WrongAnimal()
-{	std::cout << _type << ".~WrongAnimal()" << std::endl;
+{	std::cout << type << ".~WrongAnimal()" << std::endl;
 }
 WrongAnimal const & 	WrongAnimal::operator=( WrongAnimal const & )
 {
-	std::cout << _type << ".WrongAnimal::operator=() " << std::endl;
+	std::cout << type << ".WrongAnimal::operator=() " << std::endl;
 	return *this;
 }
 std::string const &	WrongAnimal::getType() const
-{	return _type;
+{	return type;
 }
 void			WrongAnimal::makeSound() const
 {	std::cout << "__" << std::endl;

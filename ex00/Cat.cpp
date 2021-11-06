@@ -3,16 +3,16 @@
 
 Cat::Cat()
 {
-	_type = "Cat";
-	std::cout << _type << ".Cat()" << std::endl;
+	type = "Cat";
+	std::cout << type << ".Cat()" << std::endl;
 }
 Cat::Cat( Cat const & )
 {
-	_type = "Cat";
-	std::cout << _type << ".Cat( Cat )" << std::endl;
+	type = "Cat";
+	std::cout << type << ".Cat( Cat )" << std::endl;
 }
 Cat::~Cat()
-{	std::cout << _type << ".~Cat()" << std::endl;
+{	std::cout << type << ".~Cat()" << std::endl;
 }
 
 void			Cat::makeSound() const
