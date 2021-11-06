@@ -10,7 +10,7 @@ Animal::Animal( Animal const & animal ):
 {	std::cout << _type << ".Animal( Animal )" << std::endl;
 }
 Animal::~Animal()
-{	std::cout << _type << ".~Animal()" << std::endl;
+{	std::cout << _type << ".~Animal()" << std::endl << std::endl;
 }
 Animal const & 	Animal::operator=( Animal const & )
 {
